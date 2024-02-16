@@ -1,0 +1,72 @@
+.profile {
+    &__content {
+        &-orders {
+            padding: 3rem 5rem;
+
+            &__order-id {
+                font-size: 1.6rem !important;
+            }
+
+            &__view-orders {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                p {
+                    user-select: none;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $link-text;
+                    transition: all .2s;
+
+                    &:hover {
+                        color: $link-text-dark;
+                    }
+                }
+            }
+
+            &__view-all {
+                background-color: $popup-bg;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    cursor: pointer;
+                    user-select: none;
+                    height: 5rem;
+                    width: 5rem;
+                    position: absolute;
+                    top: 3rem;
+                    right: 4rem;
+                    transition: all .2s;
+
+                    &:hover {
+                        transform: scale(.9);
+                    }
+                }
+
+                table {
+                    width: 60%;
+                }
+            }
+
+            table {
+
+                th {
+                    font-size: 1.8rem;
+                }
+
+                td {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

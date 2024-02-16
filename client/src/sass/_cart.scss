@@ -1,0 +1,230 @@
+.cart {
+    flex: 1;
+    position: relative;
+    padding: 4rem 20rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 4rem 15rem;   
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem 10rem;           
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 4rem 2rem;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 3.5rem;
+        color: $primary-text;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        &-products {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            &__product {
+                position: relative;
+                max-height: 20rem;
+                max-width: 51rem;
+                height: 100%;
+                width: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, .15);
+                display: flex;
+
+                @media only screen and (max-width: $bp-medium) {
+                    max-width: unset;
+                    width: 100% !important;
+                }
+
+                &-image {
+                    background-color: rgb(240, 240, 240);
+                    max-width: 20rem;
+                    height: 20rem;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &-details {
+                    flex: 1;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1rem 1.5rem;
+
+                    &__heading {
+                        width: 100%;
+                    }
+
+                    &__name {
+                        font-weight: 700;
+                        font-size: 2rem;
+                        color: $primary-text;
+                    }
+
+                    &__description {
+                        font-weight: 700;
+                        font-size: 1.4rem;
+                        color: $secondary-text;
+                    }
+
+                    &__content {
+                        width: 100%;
+                    }
+
+                    &__quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        p:nth-child(1) {
+                            font-weight: 600;
+                            font-size: 1.8rem;
+                            color: rgb(68, 68, 68);
+                        }
+
+                        input:nth-child(2) {
+                            border-radius: 3rem;
+                            border: 1px solid $border-main;
+                            padding: .8rem 2rem;
+                            font-family: $primary-font;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            color: $primary-text;
+                            
+                            &::-webkit-inner-spin-button,
+                            &::-webkit-outer-spin-button {
+                                opacity: 1;
+                            }
+                        }
+
+                        p:nth-child(3) {
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                            color: $secondary-text;
+                        }
+                    }
+
+                    &__full-price {
+                        font-weight: 700;
+                        font-size: 2rem;
+                        color: $primary-text;
+                    }
+                }
+
+                &-close {
+                    height: 1.8rem;
+                    width: 1.8rem;
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-summary {
+            flex: 1;
+            align-self: flex-start;
+            padding: 1rem 2rem 2.3rem;
+            max-height: 35rem;
+            max-width: 37rem;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, .15);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            @media only screen and (max-width: $bp-medium) {
+                max-width: unset;
+            }
+
+            &__title {
+                font-weight: 700;
+                font-size: 3.2rem;
+                color: $primary-text;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $border-light;
+            }
+
+            &__details {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $border-light;
+
+                &-subtotal {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        color: $primary-text;
+                    }
+                }
+            }
+
+            &__total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $border-light;
+
+                p {
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    color: $primary-text;
+                }
+            }
+
+            &__checkout {
+                font-family: $primary-font;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                border: none;
+                background-color: black;
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.6rem;
+                transition: all .2s;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}

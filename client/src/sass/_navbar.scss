@@ -1,0 +1,156 @@
+.navbar {
+    padding: 3rem 0;
+    margin: 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    border-bottom: 2px solid $border-light;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0 15rem;   
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 0 10rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 0 2rem;        
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+
+        svg {
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: $theme-text-1;
+        }
+    }
+
+    &__form {
+        background-color: rgb(242, 242, 242);
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        border-radius: 3rem;
+        user-select: none;
+
+        input {
+            flex: 1;
+            background-color: rgb(242, 242, 242);
+            border: none;
+            font-size: 1.8rem;
+            font-family: $primary-font;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: rgb(88, 88, 88);
+                font-weight: 500;
+            }
+        }
+
+        svg {
+            height: 2.5rem;
+            width: 2.5rem;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &-categories {
+            svg {
+                height: 1.5rem !important;
+                width: 1.5rem !important;
+            }
+        }
+        
+        &-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+
+            svg {
+                height: 3rem;
+                width: 3rem;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 1.7rem;
+                color: $primary-text;
+            }
+
+            &__cart-number {
+                height: 2.3rem;
+                width: 2.3rem;
+                background-color: $theme-1;
+                border-radius: 50%;
+                position: absolute;
+                left: 1.7rem;
+                bottom: 1.7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: white;
+                }
+            }  
+        }
+    }
+}
+
+.dropdown-toggle {
+    border: none !important;
+    outline: none !important;
+
+    &:active,
+    &:focus {
+        outline: none !important;
+        border: none !important;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.dropdown-item {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid $border-main;
+    
+    &__last-child {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,85 @@
+// Background Color
+$primary-background: rgb(250, 250, 250);
+
+// Text Color
+$primary-text: rgb(0, 0, 0);
+$secondary-text: rgb(115, 115, 115);
+$tertiary-text: rgb(199, 199, 199);
+$link-text: rgb(119, 167, 255);
+$link-text-dark: rgb(24, 119, 242);
+$error-text: rgb(237, 73, 86);
+$error-text-dark: rgb(177, 52, 63);
+
+// Theme Colors
+$theme-1: #f6a192;
+$theme-2: #f6b092;
+$theme-3: #f6c492;
+$theme-4: #f6cf92;
+$theme-5: #f6d992;
+
+// Theme Text
+$theme-text-1: #472f17;
+
+// Button
+$primary-button: rgb(0, 149, 246);
+$primary-button-hover: rgb(24, 119, 242);
+$secondary-button: rgb(239, 239, 239);
+$secondary-button-hover: rgb(219, 219, 219);
+
+// Hover 
+$hover-overlay: rgba(0, 0, 0, .05);
+
+// Popup Background
+$popup-bg: rgba(0, 0, 0, .65);
+$popup-bg-light: rgba(0, 0, 0, .3);
+
+// Border
+$border-main: rgb(219, 219, 219);
+$border-light: rgb(235, 235, 235);
+
+// Font Family
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Jost', sans-serif;
+
+// Responsive Breakpoints 
+$bp-extra-large: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-extra-small: 25em; // 450px
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $primary-text;
+    background-color: $primary-background;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span {
+    margin: 0;
+}
+
+// Reuseable
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

@@ -1,0 +1,103 @@
+.home-product {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: $secondary-font;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &__image {
+        max-height: 30rem;
+        height: 100%;
+        background-color: rgb(240, 240, 240);
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        &-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p:nth-child(1),
+            p:nth-child(2) {
+                color: $primary-text;
+                font-size: 2rem;
+            }
+
+            p:nth-child(1) {
+                font-weight: 700;
+            }
+
+            p:nth-child(2) {
+                font-weight: 700;
+            }
+        }
+
+        &-description {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: $secondary-text;
+        }
+
+        &-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &__ratings {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+
+                &-svg {
+                    height: 1.8rem;
+                    width: 1.8rem;
+                }
+            }
+        }
+
+        &-reviews {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $secondary-text;
+        }
+
+        &-btn {
+            margin-top: .5rem;
+            align-self: flex-start;
+            background-color: transparent;
+            padding: 1rem 2.5rem;
+            border-radius: 3rem;
+            border: 1px solid black;
+            color: black;
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 1.4rem;
+            transition: all .2s;
+
+            &:hover {
+                background-color: $theme-text-1;
+                color: white;
+            }
+        }
+    }
+}

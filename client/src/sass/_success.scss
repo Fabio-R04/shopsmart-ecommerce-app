@@ -1,0 +1,58 @@
+.success {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        margin-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        svg {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            h1 {
+                font-weight: 700;
+                font-size: 3.5rem;
+                color: $primary-text;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.8rem;
+                color: $secondary-text;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            margin-top: 1rem;
+            width: 100%;
+            padding: 1.5rem 0;
+            font-family: $primary-font;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background-color: black;
+            color: white;
+            border-radius: 1rem;
+            border: none;
+            transition: all .2s;
+
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.home {
+    position: relative;
+    margin: 0 20rem; // was 10rem
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0 15rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 0 10rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 0 2rem;
+    }
+
+    &__heading {
+        background-color: #faefda;
+        height: 35rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+
+        @media only screen and (max-width: 56.25em) {
+            display: none;
+        }
+
+        &-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20rem;
+
+            @media only screen and (max-width: 100em) {
+                gap: 5rem;
+            }
+
+            @media only screen and (max-width: $bp-extra-large) {
+                gap: 0;
+            }
+
+            @media only screen and (max-width: $bp-largest) {
+                gap: 8rem;
+            }
+
+            @media only screen and (max-width: $bp-large) {
+                gap: 0;
+            }
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3rem;
+
+            h1 {
+                color: $theme-text-1;
+                font-weight: 700;
+                font-size: 4.5rem;
+
+                @media only screen and (max-width: $bp-extra-large) {
+                    font-size: 3.5rem;
+                }
+            }
+
+            button {
+                background-color: $theme-text-1;
+                padding: 1.5rem 3rem;
+                border-radius: 3rem;
+                border: none;
+                color: white;
+                font-family: $primary-font;
+                font-weight: 600;
+                font-size: 1.6rem;
+                transition: all .2s;
+
+                &:hover {
+                    background-color: #312112;
+                }
+            }
+        }
+
+        &-image {
+            display: block;
+            height: 110%;
+            max-width: 40rem;
+            object-fit: fill;
+
+            @media only screen and (max-width: $bp-extra-large) {
+                height: 90%;
+            }
+        }
+    }
+
+    &__products-section {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        &__heading {
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: $primary-text;
+        }
+
+        &__products {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+    }
+
+    &__information {
+        padding: 10rem 20rem;
+        background-color: rgb(245, 245, 245);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 40rem);
+        justify-content: center;
+        gap: 5rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            padding: 10rem 15rem;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 10rem 10rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 10rem 2rem;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            &__svg {
+                background-color: rgb(230, 230, 230);
+                height: 8rem;
+                width: 8rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    fill: #c56e59 !important;
+
+                    path {
+                        fill: #c56e59 !important;
+                    }
+                }
+            }
+
+            &__details {
+                display: flex;
+                flex-direction: column;
+
+                p:nth-child(1) {
+                    font-weight: 900;
+                    font-size: 1.9rem;
+                }
+
+                p:nth-child(2) {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    color: $secondary-text;
+                }
+            }
+        }
+    }
+}

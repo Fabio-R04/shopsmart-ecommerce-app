@@ -1,0 +1,190 @@
+.admin {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0 20rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 0 15rem;   
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 0 10rem;           
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 2rem;        
+    }
+
+    &__sidebar {
+        border-right: 2px solid $border-light;
+        padding: 2rem 0;
+        background-color: $primary-background;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+
+            svg {
+                background-color: $primary-background !important;
+                height: 3rem;
+                width: 3rem;
+                fill: $secondary-text !important;
+                
+                path {
+                    fill: $secondary-text !important;
+                }
+            }
+
+            svg:nth-child(3) {
+                margin-left: 2rem;
+                height: 1rem;
+                width: 1rem;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 2.5rem;
+                color: $secondary-text;
+            }
+
+            &__active {
+                svg {
+                    fill: $primary-text !important;
+
+                    path {
+                        fill: $primary-text !important;
+                    }
+                }
+
+                p {
+                    color: $primary-text !important;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        &-select {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            svg {
+                height: 15rem;
+                width: 15rem;
+                fill: $theme-text-1 !important;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 3rem;
+                color: $primary-text;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: $secondary-text;
+            }
+        }
+
+        &-product {
+            padding: 2rem;
+            border: 1px solid $border-main;
+            border-radius: .8rem;
+            height: 93%;
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            overflow: auto;
+
+            &__heading {
+                font-weight: 700;
+                font-size: 3.5rem;
+                color: $primary-text;
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                &-field {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    label {
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        color: $primary-text;
+                    }
+
+                    input,
+                    select {
+                        padding: 1.5rem;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        color: $primary-text;
+                        border-radius: .8rem;
+                        border: 1px solid $border-main;
+
+                        &::placeholder {
+                            color: $secondary-text;
+                        }
+                    }
+                }
+
+                &-btn {
+                    padding: 1.5rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: white;
+                    background-color: black;
+                    border: none;
+                    border-radius: .8rem;
+                    transition: all .2s;
+
+                    &:hover {
+                        background-color: rgb(26, 26, 26);
+                    }
+                }
+            }
+        }
+
+        &-category {
+            top: 20.5% !important;
+            height: auto !important;
+        }
+
+        &-account {
+            top: 27% !important;
+        }
+    }
+}
